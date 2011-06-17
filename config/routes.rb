@@ -1,4 +1,6 @@
 Homepage::Application.routes.draw do
+  resources :categories
+
   resources :resumes
 
   root :to => "home#index", 
