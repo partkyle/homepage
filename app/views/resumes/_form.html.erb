@@ -26,4 +26,17 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  
+  <div class="field">
+    <h3>Categories</h3>
+    <ul>
+    <% for category in Category.find(:all) %>
+      <li>
+        <%= check_box_tag "resume[category_ids][]", category.id, @resume.categories.include?(category) %>
+        <%= category.title %>
+      </li>
+    <% end %>
+    </ul>  
+  </div>
+
 <% end %>
