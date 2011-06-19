@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% if !@resume.categories.blank? %>
+  <%= render :partial => 'category', :locals => {:categories => @resume.categories} %>
+<% else %>
+  <p class="alert">There are no categories for this resume.</p>
+<% end %>
+
 <p>
   <b>Name:</b>
   <%= @resume.name %>
@@ -11,7 +17,7 @@
 </p>
 
 <p>
-  <b>Created at:</b>
+  <b>Created at:</b> 
   <%= @resume.created_at %>
 </p>
 
