@@ -1,9 +1,10 @@
 Homepage::Application.routes.draw do
-  resources :categories
+  root :to => "home#index"
 
-  resources :resumes
-
-  root :to => "home#index", 
+  namespace :admin do
+    resources :categories
+    resources :resumes
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

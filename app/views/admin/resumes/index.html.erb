@@ -15,13 +15,13 @@
     <td><%= resume.name %></td>
     <td><%= resume.comment %></td>
     <td><%= resume.created_at %></td>
-    <td><%= link_to 'Show', resume %></td>
-    <td><%= link_to 'Edit', edit_resume_path(resume) %></td>
-    <td><%= link_to 'Destroy', resume, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', [:admin, resume] %></td>
+    <td><%= link_to 'Edit', edit_admin_resume_path(resume) %></td>
+    <td><%= link_to 'Destroy', [:admin, resume], confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Resume', new_resume_path %>
+<%= link_to 'New Resume', new_admin_resume_path %>
