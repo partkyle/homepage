@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(:version => 20110621065148) do
     t.string   "ancestry"
   end
 
+  add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
+
   create_table "categories_resumes", :id => false, :force => true do |t|
     t.integer "category_id"
     t.integer "resume_id"
