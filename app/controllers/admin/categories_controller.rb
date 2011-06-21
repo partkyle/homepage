@@ -3,7 +3,7 @@ module Admin
     # GET /categories
     # GET /categories.json
     def index
-      @categories = Category.all
+      @categories = Category.roots
 
       respond_to do |format|
         format.html # index.html.erb
