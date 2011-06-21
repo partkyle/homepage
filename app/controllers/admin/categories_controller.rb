@@ -25,7 +25,7 @@ module Admin
     # GET /categories/new
     # GET /categories/new.json
     def new
-      @category = Category.new
+      @category = Category.new(:parent_id => params[:parent_id])
 
       respond_to do |format|
         format.html # new.html.erb

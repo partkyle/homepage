@@ -31,6 +31,8 @@ GEM
       activesupport (= 3.1.0.rc4)
     activesupport (3.1.0.rc4)
       multi_json (~> 1.0)
+    ancestry (1.2.4)
+      activerecord (>= 2.2.2)
     ansi (1.2.5)
     arel (2.1.1)
     bcrypt-ruby (2.1.4)
@@ -106,6 +108,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   coffee-script
   jquery-rails
   rails (= 3.1.0.rc4)

@@ -1,6 +1,0 @@
-<div class="category">
-  <h2><%= category.title %></h2>
-  <% if !category.sub_categories.empty? %>
-      <%= render :partial => "category", :collection => category.sub_categories %>
-  <% end %>
-</div>
