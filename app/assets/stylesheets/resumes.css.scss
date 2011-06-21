@@ -2,6 +2,73 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body.Resumes {
+body {
   // Place scoped styles here
+  font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  .sub {
+    margin-left: 10px;
+  }
+  
+  .category {
+    h2 {
+      padding: 4px 10px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 1px rgba(0,0,0,.3);
+      border: 1px solid #444;
+      background-color: #555;
+      color: #ededed;
+    }
+    .category {
+      .h2 {
+        border: 1px solid #ddd;
+        border-top-color: #eee;
+        border-left-color: #eee;
+        background-color: #ebebeb;
+        color: #666;
+      }
+    }
+  }
+    
+  h4 {
+    border-bottom: 1px solid #555;
+    padding-right: 0px;
+  }
+  
+  .date {
+    float: right;
+    text-transform: none;
+  }
+
+  .current {
+    font-style: italic;
+  }
+  
+  table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    th {
+      background-color: #ebebeb;
+      min-width: 60px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 4px 8px;
+    }
+  }
+  
+  ul {
+    list-style: circle;
+  }
 }
+  
+
+
+
+
+
+
+
+
+
+
+
