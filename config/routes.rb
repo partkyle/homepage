@@ -1,6 +1,8 @@
 Homepage::Application.routes.draw do
   root :to => "home#index"
 
+  resources :resumes, :only => ['index', 'show']
+
   namespace :admin do
     resources :categories
     resources :resumes
