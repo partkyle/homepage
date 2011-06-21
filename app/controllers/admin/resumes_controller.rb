@@ -45,7 +45,7 @@ module Admin
 
       respond_to do |format|
         if @resume.save
-          format.html { redirect_to @resume, notice: 'Resume was successfully created.' }
+          format.html { redirect_to [:admin, @resume], notice: 'Resume was successfully created.' }
           format.json { render json: @resume, status: :created, location: @resume }
         else
           format.html { render action: "new" }
@@ -61,7 +61,7 @@ module Admin
 
       respond_to do |format|
         if @resume.update_attributes(params[:resume])
-          format.html { redirect_to @resume, notice: 'Resume was successfully updated.' }
+          format.html { redirect_to [:admin, @resume], notice: 'Resume was successfully updated.' }
           format.json { head :ok }
         else
           format.html { render action: "edit" }
@@ -77,7 +77,7 @@ module Admin
       @resume.destroy
 
       respond_to do |format|
-        format.html { redirect_to resumes_url }
+        format.html { redirect_to admin_resumes_url }
         format.json { head :ok }
       end
     end
