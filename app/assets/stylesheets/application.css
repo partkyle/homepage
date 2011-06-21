@@ -5,3 +5,10 @@
  *= require_self
  *= require_tree . 
 */
+
+#side {
+	float: right;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 15px;
+}
