@@ -16,6 +16,8 @@ gem 'jquery-rails'
 
 gem 'ancestry'
 
+gem 'pdfkit'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
