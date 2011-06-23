@@ -16,6 +16,8 @@ gem 'jquery-rails'
 
 gem 'ancestry'
 
+gem 'RedCloth'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

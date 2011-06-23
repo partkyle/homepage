@@ -1,9 +1,7 @@
 <div class="category">
   <h2><%= category.title %></h2>
   
-  <div class="content">
-    <%= category.content %>
-  </div>
+  <%= textile category.content %>
 
   <% if !category.children.empty? %>
     <%= render :partial => category.children %>
