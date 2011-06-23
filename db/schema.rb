@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110621065148) do
+ActiveRecord::Schema.define(:version => 20110623065102) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20110621065148) do
     t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "ancestry"
+    t.text     "content"
   end
 
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
