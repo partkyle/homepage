@@ -6,6 +6,10 @@
  *= require_tree . 
 */
 
+body {
+  font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+}
+
 #side {
 	float: right;
 	padding: 10px;
