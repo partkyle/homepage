@@ -14,16 +14,24 @@
   </div>
 </header>
 
+<div id="shadow">
+</div>
+
 <div id="side">
   <%= render "side" %>
 </div>
 
-<div id="content">
+<div id="wrapper" class="clearfix">
   <div id="sidebar">
     <%= render "sidebar" %>
   </div>
-  <%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
 </div>
 
+<footer>
+  <%= render "footer" %>
+</footer>
 </body>
 </html>
