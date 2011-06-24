@@ -22,6 +22,17 @@ $base-color: #444;
   background: -moz-linear-gradient(top,  $start,  $end); /* for firefox 3.6+ */
 }
 
+::selection {
+  background: $base-color; /* webkit */
+  color: #fff - $base-color;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: $base-color; /* Firefox */
+  color: #fff - $base-color;
+  text-shadow: none;
+}
+
 body.resumes {
   @include gradient(#fefefe, #dedede);
   header {
@@ -98,6 +109,14 @@ body.resumes {
         position: absolute;
         top: -170px;
         margin: 0 0 45px;
+        img {
+          border: 1px solid #CCC;
+          padding: 5px;
+          margin: 0 0 20px;
+          background-color: #EBEBEB;
+          float: right;
+          height: 125px;
+        }
       }
       #navMain {
         position: relative;
