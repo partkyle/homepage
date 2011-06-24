@@ -3,7 +3,6 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :title
       t.string :subtitle
-      t.date :created_at
 
       t.timestamps
     end

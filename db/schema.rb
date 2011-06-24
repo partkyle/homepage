@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20110624153310) do
   create_table "categories", :force => true do |t|
     t.string   "title"
     t.string   "subtitle"
-    t.date     "created_at"
+    t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "category_id"
     t.string   "ancestry"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20110624153310) do
   create_table "resumes", :force => true do |t|
     t.string   "name"
     t.text     "comment"
-    t.date     "created_at"
+    t.datetime "created_at"
     t.datetime "updated_at"
   end
 

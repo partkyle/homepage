@@ -3,7 +3,6 @@ class CreateResumes < ActiveRecord::Migration
     create_table :resumes do |t|
       t.string :name
       t.text :comment
-      t.date :created_at
 
       t.timestamps
     end
