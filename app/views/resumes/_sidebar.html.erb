@@ -1,21 +1,14 @@
-    <div id="avatar"><a class="top" href="javascript:void(0);" title="Go back to top!"><img src="images/avatar.png" alt="John Doe"></a> </div>
-    <ul id="navMain">
-      <!-- You can change the order of the menu here -->
-      <li><a href="#education">Education</a></li>
-      <li><a href="#technical">Technical Expertise</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">Work History</a></li>
-      <li><a href="#gallery">Sample Works</a></li>
-      <li><a href="#awards">Awards &amp; Accomplishments</a></li>
-      <li><a href="#contact">Contact Me</a></li>
-      <!-- end / #navMain -->
-    </ul>
-    <ul id="networkLinks">
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li class="divider"><a href="javascript:window.print()"></a></li>
-      <li><a href="http://linkedin.com/in/mustafaquilon" class="external"></a></li>
-      <li><a href="http://twitter.com/mustafaquilon" class="external"></a></li>
-      <!-- end / #networkLinks -->
-    </ul>
-    <!-- end / #sidebar -->
+<div id="avatar">
+  <a class="top" href="#" title="Go back to top!"><img src="images/avatar.png" alt="John Doe"></a></div>
+<ul id="navMain">
+  <% @resume.categories.each do |category| %>
+    <li><a href="#category-<%= category.id %>" class="category-link"><%= category.title %></a></li>
+  <% end %>
+</ul>
+<ul id="networkLinks">
+  <li><a href="#"></a></li>
+  <li><a href="#"></a></li>
+  <li class="divider"><a href="javascript:window.print()"></a></li>
+  <li><a href="http://linkedin.com/in/mustafaquilon" class="external"></a></li>
+  <li><a href="http://twitter.com/mustafaquilon" class="external"></a></li>
+</ul>
