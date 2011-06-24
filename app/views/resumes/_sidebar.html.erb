@@ -1,14 +1,11 @@
 <div id="avatar">
-  <a class="top" href="#" title="Go back to top!"><img src="images/avatar.png" alt="John Doe"></a></div>
+  <%= image_tag 'http://www.gravatar.com/avatar/7586e08d4cd2ffd4a635f09fdd58026a.png' %>
+</div>
 <ul id="navMain">
   <% @resume.categories.each do |category| %>
     <li><a href="#category-<%= category.id %>" class="category-link"><%= category.title %></a></li>
   <% end %>
 </ul>
 <ul id="networkLinks">
-  <li><a href="#"></a></li>
-  <li><a href="#"></a></li>
-  <li class="divider"><a href="javascript:window.print()"></a></li>
-  <li><a href="http://linkedin.com/in/mustafaquilon" class="external"></a></li>
   <li><a href="http://twitter.com/mustafaquilon" class="external"></a></li>
 </ul>
