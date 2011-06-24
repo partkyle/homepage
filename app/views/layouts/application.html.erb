@@ -9,14 +9,18 @@
 <body class="<%= params[:controller].parameterize %>">
   
 <header>
-  <%= render "header" %>  
+  <div id="header">
+    <%= render "header" %>
+  </div>
 </header>
 
 <div id="side">
   <%= render "side" %>
 </div>
 
-<%= yield %>
+<div id="content">
+  <%= yield %>
+</div>
 
 </body>
 </html>

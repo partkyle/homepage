@@ -2,18 +2,24 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require reset
  *= require_self
  *= require_tree . 
 */
 
 body {
-  font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font: 175% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px;
 }
 
 #side {
 	float: right;
-	padding: 10px;
+	padding: 2px 5px;
 	border: 1px solid black;
-	border-radius: 15px;
+	border-radius: 10px;
 	background-color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1000;
 }

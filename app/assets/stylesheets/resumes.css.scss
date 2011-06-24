@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$base-color: #444;
+
 @mixin title-bar($color) {
   padding: 4px 10px;
   text-transform: uppercase;
@@ -14,23 +16,81 @@
   color: #666 + $color;
 }
 
+@mixin gradient($start, $end) {
+  background: $start;
+  background: -webkit-gradient(linear, left top, left bottom, from($start), to($end)); /* for webkit browsers */
+  background: -moz-linear-gradient(top,  $start,  $end); /* for firefox 3.6+ */
+}
+
 body.resumes {
-  // Place scoped styles here
+  ::selection {
+    background: $base-color; /* Safari */
+    color: lighten($base-color, 70%);
+  }
+  ::-moz-selection {
+    background: $base-color; /* Mozilla */
+    color: lighten($base-color, 70%);
+  }
+  header {
+    @include gradient(#dedede, #cbcbcb);
+    color: #444;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    clear: both;
+    width: 100%;
+    #header {
+      overflow: hidden;
+      width: 960px;
+      margin: 0 auto;
+      padding: 23px 0 5px;
+      text-shadow: 1px 1px 0 #F8F8F8;
+      #info {
+        overflow: hidden;
+        float: left;
+        width: 342px;
+        margin: 0 20px 0 0;
+        h1 {
+          width: 100%;
+          margin: 0 0 12px;
+          padding: 0 0 8px;
+          border-bottom: 2px groove #dedede;
+          font: 20px/30px Helvetica, Arial, sans-serif;
+          color: #333;
+          text-transform: uppercase;
+          text-align: right;
+        }
+        p {
+          text-align: right;
+        }
+        p:last-child {
+          margin: 0 0 20px 20px;
+        }
+      }
+      #intro {
+        overflow: hidden;
+        float: left;
+        width: 598px;
+      }
+    }
+  }
   .sub {
     margin-left: 10px;
   }
-  
   .category {
     h2 {
-      @include title-bar(#444);
+      @include title-bar($base-color);
     }
     p {
        margin-left: 20px;
     }
+    ul {
+      list-style: circle;
+    }
     .category {
       margin-left: 20px;
       h2 {
-        @include title-bar(#ddd);
+        @include title-bar(#fff - $base-color);
       }
     }
   }
@@ -60,10 +120,6 @@ body.resumes {
       border: 1px solid #ddd;
       padding: 4px 8px;
     }
-  }
-  
-  ul {
-    list-style: circle;
   }
 }
   
