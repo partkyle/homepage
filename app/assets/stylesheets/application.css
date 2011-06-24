@@ -8,8 +8,9 @@
 */
 
 body {
-  font: 175% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
-  margin: 0px;
+  font: 12px/20px Helvetica, Arial, sans-serif;
+  color: #555;
+  text-shadow: 1px 1px 0 white;
 }
 
 #side {
