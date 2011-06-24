@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= params[:controller].parameterize %>">
+  
+<header>
+  <%= render "header" %>  
+</header>
 
 <div id="side">
   <%= render "side" %>
