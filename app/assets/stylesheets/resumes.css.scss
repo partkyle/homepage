@@ -46,7 +46,6 @@ body.resumes {
     #header {
       overflow: hidden;
       width: 960px;
-      margin: 0 auto;
       padding: 23px 0 5px;
       text-shadow: 1px 1px 0 #F8F8F8;
       #info {
@@ -95,7 +94,6 @@ body.resumes {
   #wrapper {
     position: relative;
     width: 960px;
-    margin: -5px 235px 0;
     #sidebar {
       z-index: 10;
       height: auto;
@@ -142,6 +140,7 @@ body.resumes {
       }
     }
     #content {
+      min-height: 700px;
       position: relative;
       float: right;
       width: 578px;
