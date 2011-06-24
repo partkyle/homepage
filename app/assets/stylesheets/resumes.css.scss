@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin title-bar($color) {
+  padding: 4px 10px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0,0,0,.3);
+  background-color: $color;
+  border: 1px solid lighten($color, 20%);
+  border-width: 1px;
+  border-style: solid;
+  border-color: lighten($color, 50%) darken($color, 20%) darken($color, 20%) lighten($color, 50%);
+  color: #666 + $color;
+}
+
 body.resumes {
   // Place scoped styles here
   .sub {
@@ -10,12 +22,7 @@ body.resumes {
   
   .category {
     h2 {
-      padding: 4px 10px;
-      text-transform: uppercase;
-      text-shadow: 0 1px 1px rgba(0,0,0,.3);
-      border: 1px solid #444;
-      background-color: #555;
-      color: #ededed;
+      @include title-bar(#444);
     }
     p {
        margin-left: 20px;
@@ -23,11 +30,7 @@ body.resumes {
     .category {
       margin-left: 20px;
       h2 {
-        border: 1px solid #ddd;
-        border-top-color: #eee;
-        border-left-color: #eee;
-        background-color: #ebebeb;
-        color: #666;
+        @include title-bar(#ddd);
       }
     }
   }
