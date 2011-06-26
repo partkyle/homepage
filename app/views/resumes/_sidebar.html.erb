@@ -2,8 +2,9 @@
   <%= image_tag 'http://www.gravatar.com/avatar/7586e08d4cd2ffd4a635f09fdd58026a.png' %>
 </div>
 <ul id="navMain">
+  <li><a href="#" data-scroll="header" class="category-link">Top</a></li>
   <% @resume.categories.each do |category| %>
-    <li><a href="#category-<%= category.id %>" class="category-link"><%= category.title %></a></li>
+    <li><a href="#category-<%= category.id %>" data-scroll="#category-<%= category.id %>" class="category-link"><%= category.title %></a></li>
   <% end %>
 </ul>
 <ul id="networkLinks">

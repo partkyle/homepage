@@ -5,4 +5,4 @@
 jQuery ->
   $('a.category-link').live 'click', (e) ->
     e.preventDefault()
-    $.scrollTo($(this).attr('href'), 'slow')
+    $.scrollTo($(this).data('scroll'), 'slow')
