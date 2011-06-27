@@ -23,7 +23,11 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: mysql
+  encoding: utf8
+  database: homepage
   pool: 5
+  username: root
+  password:
   timeout: 5000
+  host: localhost
