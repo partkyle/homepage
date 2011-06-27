@@ -18,6 +18,8 @@ gem 'ancestry'
 
 gem 'RedCloth'
 
+gem 'mysql'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

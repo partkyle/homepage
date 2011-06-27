@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(:version => 20110624153310) do
     t.string   "subtitle"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "category_id"
     t.string   "ancestry"
     t.text     "content"
   end
