@@ -1,5 +1,5 @@
 module Admin
-  class PropertiesController < ApplicationController
+  class PropertiesController < BaseController
     # GET /admin/properties
     # GET /admin/properties.json
     def index
