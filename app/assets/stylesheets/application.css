@@ -13,15 +13,3 @@ body {
   color: #555;
   text-shadow: 1px 1px 0 white;
 }
-
-#side {
-	float: right;
-	padding: 2px 5px;
-	border: 1px solid black;
-	border-radius: 10px;
-	background-color: white;
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 1000;
-}
