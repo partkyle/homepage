@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= params[:controller].parameterize %> <%= @module_name.downcase %>">
+<body class="<%= params[:controller].parameterize %> <%= @module_name.downcase if @module_name %>">
   
 <header>
   <div id="header">
