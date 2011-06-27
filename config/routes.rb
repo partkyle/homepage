@@ -1,15 +1,14 @@
 Homepage::Application.routes.draw do
-  namespace :admin do resources :properties end
-
   root :to => "home#index"
 
-  resources :resumes, :only => ['index', 'show']
+  match '/resumes/:name' => 'resumes#show'
   
   resources :categories, :only => ['show']
 
   namespace :admin do
     resources :categories
     resources :resumes
+    resources :properties
   end
 
   # The priority is based upon order of creation:

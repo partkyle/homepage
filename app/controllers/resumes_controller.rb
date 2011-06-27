@@ -3,7 +3,7 @@ class ResumesController < ApplicationController
   end
 
   def show
-    @resume = Resume.find(params[:id])
+    @resume = Resume.find_by_name(params[:name])
   end
 
 end
