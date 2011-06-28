@@ -16,7 +16,7 @@ gem 'jquery-rails'
 
 gem 'ancestry'
 
-gem 'RedCloth'
+gem 'redcarpet'
 
 gem 'mysql'
 

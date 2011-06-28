@@ -1,7 +1,7 @@
 <div class="category">
   <h2 id="category-<%= category.id %>"><%= category.title %> <span class="date"><%= category.subtitle %></span></h2>
   
-  <%= textile category.content %>
+  <%= markdown category.content %>
 
   <% if !category.children.empty? %>
     <%= render :partial => category.children %>

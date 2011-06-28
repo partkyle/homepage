@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    RedCloth (4.2.7)
     actionmailer (3.1.0.rc4)
       actionpack (= 3.1.0.rc4)
       mail (~> 2.3.0)
@@ -84,6 +83,7 @@ GEM
       thor (~> 0.14.6)
     rake (0.9.2)
     rdoc (3.6.1)
+    redcarpet (1.17.2)
     sass (3.1.2)
     sass-rails (3.1.0.rc.2)
       actionpack (~> 3.1.0.rc1)
@@ -110,12 +110,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  RedCloth
   ancestry
   coffee-script
   jquery-rails
   mysql
   rails (= 3.1.0.rc4)
+  redcarpet
   sass-rails (~> 3.1.0.rc)
   sqlite3
   turn

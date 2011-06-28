@@ -1,12 +1,13 @@
 module ApplicationHelper
-  def textile(content)
-    RedCloth.new(content).to_html.html_safe if content
+  def markdown(text)
+    options = [:autolink, :no_intraemphasis]
+    Redcarpet.new(text, *options).to_html.html_safe if text
   end
   def property(name)
     if Property.where(:name => name).exists?
       property = Property.find_by_name(name)
-      if property.textile
-        textile(property.value)
+      if property.markdown
+        markdown(property.value)
       else
         property.value
       end
