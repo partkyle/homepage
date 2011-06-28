@@ -6,6 +6,7 @@ Homepage::Application.routes.draw do
   resources :categories, :only => ['show']
 
   namespace :admin do
+    match '/' => "base#index"
     resources :categories
     resources :resumes
     resources :properties
