@@ -29,7 +29,7 @@
     <% for category in Category.roots %>
       <li>
         <%= check_box_tag "resume[category_ids][]", category.id, @resume.categories.include?(category) %>
-        <%= category.title %>
+        <%= link_to category.title, admin_category_path(category) %>
       </li>
     <% end %>
     </ul>  
