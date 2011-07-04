@@ -1,0 +1,21 @@
+<p>
+  <h2>Sub Categories</h2>
+  <% if !@category.children.blank? %>
+    <table>
+      <thead>
+       <tr>
+         <th>Name</th>
+         <th></th>
+       </tr>
+       </thead>
+  <% for sub_category in @category.children %>
+      <tr>
+        <td><%= link_to sub_category.title, admin_category_path(sub_category) %></td>
+        <td><%= link_to "Edit", edit_admin_category_path(sub_category) %>
+      </tr>
+  <% end %>    
+    </table>
+  <% else %>
+    No Subcategories.
+  <% end %>
+</p>
