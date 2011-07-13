@@ -168,12 +168,16 @@ footer {
       @include title-bar(#fff - $base-color);
       font: bold 14px/20px Helvetica, Arial, sans-serif;
     }
+    .category {
+      h2 {
+        border-width: 0px;
+        border-bottom: 1px solid #555;
+        padding-right: 0px;
+        background-color: inherit;
+        color: inherit;
+      }
+    }
   }
-}
-
-h4 {
-  border-bottom: 1px solid #555;
-  padding-right: 0px;
 }
 
 .date {
